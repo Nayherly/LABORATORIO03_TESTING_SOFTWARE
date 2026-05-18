@@ -30,7 +30,7 @@ InkaRetail S.A.C. es una empresa de retail con 12 tiendas en Ayacucho, Huancayo 
 Se eligió el módulo de **Login y Registro** por las siguientes razones:
 
 - **Es la puerta de entrada al sistema.** Sin autenticación correcta, el usuario no puede acceder a ninguna funcionalidad (historial de pedidos, carrito guardado, datos personales).
-- **Maneja datos sensibles.** Credenciales, DNI, fecha de nacimiento y número de celular son datos críticos que deben validarse rigurosamente.
+- **Maneja datos sensibles.** Credenciales, y número de celular son datos críticos que deben validarse rigurosamente.
 - **Tiene múltiples validaciones.** Formato de email, longitud de contraseña, unicidad de correo, formato de celular — cada una representa un caso de prueba distinto.
 - **Alto impacto en el negocio.** Un fallo en el login o registro puede impedir que un cliente realice una compra, lo que representa una pérdida directa para Falabella.
 
@@ -51,8 +51,7 @@ Se eligió el módulo de **Login y Registro** por las siguientes razones:
 | Email | Formato válido con @ y dominio |
 | Email | No debe estar previamente registrado |
 | Contraseña | Mínimo 8 caracteres |
-| Celular | Solo dígitos, exactamente 8 caracteres (formato peruano) |
-| DNI | Solo dígitos, formato válido |
+
 
 
 ### Análisis previo al diseño de casos
@@ -82,4 +81,4 @@ Se eligió el módulo de **Login y Registro** por las siguientes razones:
 
 > 🔗 **[Ver matriz completa en Excel →](https://docs.google.com/spreadsheets/d/1iuPTvSQnfy-sVdxpXogCz3pOEy0ifEN3iGEnoWh6Na8/edit?usp=sharing)**
 
-La matriz contiene **10 casos de prueba** .
+La matriz contiene **8 casos de prueba** .

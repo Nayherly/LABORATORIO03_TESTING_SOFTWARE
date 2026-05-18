@@ -35,7 +35,7 @@ Cuenta con validaciones en todos sus formularios, proporcionando una experiencia
 Se eligió el módulo de **Login y Registro** por las siguientes razones:
 
 - **Es la puerta de entrada al sistema.** Sin autenticación correcta, el usuario no puede acceder a ninguna funcionalidad (historial de pedidos, carrito guardado, datos personales).
-- **Maneja datos sensibles.** Credenciales, DNI, fecha de nacimiento y número de celular son datos críticos que deben validarse rigurosamente.
+- **Maneja datos sensibles.** Credenciales, DNI y número de celular son datos críticos que deben validarse rigurosamente.
 - **Tiene múltiples validaciones.** Formato de email, longitud de contraseña, unicidad de correo, formato de celular — cada una representa un caso de prueba distinto.
 - **Alto impacto en el negocio.** Un fallo en el login o registro puede impedir que un cliente realice una compra, lo que representa una pérdida directa para Falabella.
 
