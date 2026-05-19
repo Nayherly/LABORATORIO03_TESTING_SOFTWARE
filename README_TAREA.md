@@ -32,12 +32,13 @@ Cuenta con validaciones en todos sus formularios, proporcionando una experiencia
 
 ### Módulo: Login y Registro
 
-Se eligió el módulo de **Login y Registro** por las siguientes razones:
+Módulos: Login, Registro, Búsqueda y Carrito de Compras
 
-- **Es la puerta de entrada al sistema.** Sin autenticación correcta, el usuario no puede acceder a ninguna funcionalidad (historial de pedidos, carrito guardado, datos personales).
-- **Maneja datos sensibles.** Credenciales, DNI y número de celular son datos críticos que deben validarse rigurosamente.
-- **Tiene múltiples validaciones.** Formato de email, longitud de contraseña, unicidad de correo, formato de celular — cada una representa un caso de prueba distinto.
-- **Alto impacto en el negocio.** Un fallo en el login o registro puede impedir que un cliente realice una compra, lo que representa una pérdida directa para Falabella.
+
+- **Son funcionalidades críticas del flujo de compra.** El usuario necesita registrarse o iniciar sesión para acceder a funcionalidades personalizadas, buscar productos y agregarlos al carrito antes de concretar una compra.
+- **Representan la experiencia principal del cliente en el sistema.** La búsqueda permite encontrar productos rápidamente, mientras que el carrito gestiona los artículos seleccionados para la compra. Un fallo en cualquiera de estos módulos afecta directamente la experiencia del usuario.
+- **Manejan información sensible y procesos importantes.** Los módulos de Login y Registro procesan datos personales como credenciales, DNI y número de celular, los cuales requieren validaciones rigurosas para garantizar seguridad y privacidad.
+- **Poseen múltiples validaciones funcionales y de negocio.** Se validan formatos de correo electrónico, longitud y seguridad de contraseñas, unicidad de usuarios, disponibilidad de productos, actualización del carrito, cantidad de productos y resultados de búsqueda relacionados. Cada validación representa distintos casos de prueba funcionales y de borde.
 
 ### Criterios de aceptación identificados
 
@@ -59,6 +60,15 @@ Se eligió el módulo de **Login y Registro** por las siguientes razones:
 | Celular | Solo dígitos, exactamente 8 caracteres (formato peruano) |
 | DNI | Solo dígitos, formato válido |
 
+#### Formulario de Búsqueda
+| Campo | Validación identificada |
+|---|---|
+| Barra de búsqueda | Permite texto alfanumérico |
+| Término de búsqueda | Campo obligatorio |
+
+#### Formulario de Carrito
+| Carrito vacío | Mostrar mensaje "tu carrito esta vacío"|
+| Botón agregar al carrito | Debe agregar correctamente el producto|
 
 ### Análisis previo al diseño de casos
 
@@ -66,6 +76,8 @@ Se eligió el módulo de **Login y Registro** por las siguientes razones:
 
 - **Login:** Email, Contraseña
 - **Registro:** Nombre, Apellido , Email, Contraseña, Tipo de documento, N° de documento, Celular
+- **Búsqueda**: Permite buscar los productos.
+- **Carrito**: Permite añadir productos añ carrito
 
 **2. ¿Qué validaciones aplica el sistema?**
 
@@ -89,11 +101,5 @@ Se eligió el módulo de **Login y Registro** por las siguientes razones:
 
 > 🔗 **[Ver matriz completa en Excel →](https://docs.google.com/spreadsheets/d/15C6u4wKZsb--4JO8DFmBxKe3wvjgUyyUP8AlhEE5vXI/edit?usp=sharing)**
 
-La matriz contiene **10 casos de prueba** con la siguiente distribución obligatoria:
+La matriz contiene **10 casos de prueba** .
 
-| Tipo | Técnica | Cantidad | Casos |
-|---|---|---|---|
-| Caso exitoso | PE — Clase Válida | 2 | TC-FL-001, TC-FL-002 |
-| Caso con error | PE — Clase Inválida | 4 | TC-FL-003, TC-FL-004, TC-FL-005, TC-FL-006 |
-| Valor límite | Análisis de Valores Límite | 2 | TC-FL-007, TC-FL-008 |
-| Caso extremo | Edge Cases | 2 | TC-FL-009, TC-FL-010 |
