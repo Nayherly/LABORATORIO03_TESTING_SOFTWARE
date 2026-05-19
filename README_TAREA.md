@@ -6,7 +6,7 @@
 
 | Campo | Detalle |
 |---|---|
-| **Nombre completo** | *VILA CAYO NAYHERLY DIANETH* |
+| **Nombre completo** | *VILA CAYO, NAYHERLY DIANETH* |
 | **Código universitario** | *27202120* |
 | **Curso** | S489 — Pruebas y Aseguramiento de Calidad de Software |
 | **Docente** | Ing. Lizbeth Jaico |
